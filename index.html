@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Landing Page | Curso de Programação</title>
+</head>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+	::-webkit-scrollbar {
+	    width: 10px;
+	    background-color: #fff;
+	}
+
+	::-webkit-scrollbar-thumb {
+	    background-color: #faca66;
+	}
+
+	::-moz-selection { /* para Firefox */
+	    background-color: #ffab07;
+	    color: #fff;
+	  }
+	  
+	::selection {
+	    background: #ffab07;
+	    color: #fff;
+	}
+
+	* {
+		font-family: 'Roboto', sans-serif;
+	}
+
+	body {
+		padding: 0;
+		margin: 0;
+	}
+
+	header {
+		width: 100%;
+		height: 30vh;
+		background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .75)), url('img/banner2.jpg');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		animation: moveBanner 5s ease-in-out infinite;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	header h1 {
+		color: #fff;
+		font-size: 5rem;
+		text-shadow: 1px 5px 50px black;
+		margin-bottom: 0;
+	}
+
+	#infoInicial {
+		background-image: url('bgwhite.jpg');
+		background-size: 300%;
+	}
+
+	#infoInicial h2 {
+		color: #72ad75;
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	#infoInicial p {
+		font-size: 1.5rem;
+		padding: .5rem;
+		margin-top: 0;
+		border-bottom: 1px solid #aaa;
+	}
+
+	#infoInicial p:last-child {
+		border-bottom: none;
+	}
+
+	.alinhados {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	#infoInicial {
+		padding: 1rem;
+	}
+
+	#imgInfo {
+		min-height: 50vh;
+		background-image: url('img/depoimento.png');
+		background-size: cover;
+		background-position: center;
+	}
+
+	#divIntermediaria {
+		background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .75)), url('img/banner1.jpg');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		animation: moveBanner 5s ease-in-out infinite;
+		height: 25vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+	}
+
+	#divIntermediaria h2 {
+		font-size: 5rem;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	#divIntermediaria p {
+		margin-top: 0;
+		font-size: 1.5rem;
+	}
+
+	#planos {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.plano {
+		padding: 1rem;
+		margin: 1rem;
+		border-radius: 1rem;
+		box-shadow: 1px 1px 5px #606060;
+	}
+
+	.plano ul {
+		list-style: none;
+	}
+
+	.plano ul li {
+		margin-bottom: 1rem;
+	}
+
+	.plano h3 {
+		text-align: center;
+		font-size: 3rem;
+		margin-botom: 0;
+		border-bottom: 1px dashed; #fff;
+		padding-bottom: 1rem;
+	}
+
+	.preco {
+		text-align: center;
+		color: #fff;
+		font-size: 2rem;
+		margin-top: 0;
+		text-shadow: 1px 1px 5px black;
+
+	}
+
+	.check, .x {
+		font-size: 2rem;
+	}
+
+	.check {
+		color: #72ad75;
+	}
+
+	.x {
+		color: red;
+	}
+
+	.check.maior {
+		font-size: 3rem;
+	}
+
+	button {
+		padding: 1rem;
+		border-radius: 1rem;
+		cursor: pointer;
+		display: block;
+		margin: 1rem auto;
+		border: none;
+		font-size: 1rem;
+		background-image: linear-gradient(#a1dbb2, #72ad75);	
+		color: #fff;
+	}
+
+	button:hover {
+		opacity: .75;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.cabecalho-plano {
+		margin: 0;
+		border-radius: 1rem;
+		padding: .1rem;
+		color: #fff;
+	}
+	.cabecalho-plano.basico {
+		background-image: linear-gradient(#274862, #0e8d94);	
+	}
+	.cabecalho-plano.padrao {
+		background-image: linear-gradient(#faca66, #ffab07);	
+	}
+	.cabecalho-plano.premium {
+		background-image: linear-gradient(#a1dbb2, #72ad75);	
+	}
+
+	@keyframes moveBanner {
+		0% {
+			background-position: 50% 0%;
+		}
+		50% {
+			background-position: 50% 25%;
+		}
+		75% {
+			background-position: 30% 75%;
+		}
+		90% {
+			background-position: 40% 90%;
+		}
+		100% {
+			background-position: 50% 0%;
+		}
+	}
+</style>
+<body>
+
+<header>
+	<h1>A melhor maneira de se tornar um programador!</h1>
+	<a href="#planos"><button>Veja os planos!</button></a>
+</header>
+
+<div class="alinhados">
+	<div id="infoInicial">
+		<h2>O que é? 🤔</h2>
+		<p><span class="check maior">✓</span> O nosso curso de programação é desenvolvido para <strong>iniciantes</strong> e oferece uma abordagem prática e objetiva para aprender a programar.</p>
+
+		<h2>Pra quem é? 🤔</h2>
+		<p><span class="check maior">✓</span> Este curso é ideal para pessoas sem conhecimento prévio em programação que desejam aprender a codificar e <strong>desenvolver suas próprias soluções tecnológicas</strong>.</p>
+
+		<h2>O que tem? 🤔</h2>
+		<p><span class="check maior">✓</span> Neste curso, você vai aprender sobre lógica de programação, <strong>HTML, CSS, JavaScript</strong>, entre outros conceitos fundamentais para programação. </p>
+
+		<h2>Benefícios 🤔</h2>
+		<p><span class="check maior">✓</span> Ao final do curso, você estará <strong>apto a desenvolver suas ideias</strong>, aprimorar sua carreira ou até mesmo começar a trabalhar como programador.</p>
+	</div>
+	<div id="imgInfo"></div>
+</div>
+
+
+<div id="divIntermediaria">
+	<h2>Escolha seu plano!</h2>
+	<p>Temos três opções de matrícula: básico, intermediário e avançado. Escolha a que melhor se adapta às suas necessidades e comece a aprender programação agora mesmo!</p>
+</div>
+
+<div id="planos">
+	<div class="plano">
+		<div class="cabecalho-plano basico">
+		<h3>Básico 🙂</h3>
+		<h4 class="preco">R$100,00</h4>
+		</div>
+		<ul>
+			<li><span class="check">✓</span> Acesso aos módulos básicos de programação, como lógica de programação, HTML e CSS.</li>
+			<li><span class="check">✓</span> Aulas em vídeo com explicações claras e objetivas.</li>
+			<li><span class="x">✖</span> Exercícios práticos para fixação do conhecimento adquirido.</li>
+			<li><span class="x">✖</span> Material de apoio, como apostilas e slides.</li>
+			<li><span class="x">✖</span> Suporte técnico para esclarecimento de dúvidas.</li>
+		</ul>
+
+		<button>Assinar Plano Básico</button>
+	</div>
+
+	<div class="plano">
+		<div class="cabecalho-plano padrao">
+		<h3>Padrão 😀</h3>
+		<h4 class="preco">R$150,00</h4>
+		</div>
+		<ul>
+			<li><span class="check">✓</span> Acesso aos módulos básicos de programação, como lógica de programação, HTML e CSS.</li>
+			<li><span class="check">✓</span> Aulas em vídeo com explicações claras e objetivas.</li>
+			<li><span class="check">✓</span> Exercícios práticos para fixação do conhecimento adquirido.</li>
+			<li><span class="x">✖</span> Material de apoio, como apostilas e slides.</li>
+			<li><span class="x">✖</span> Suporte técnico para esclarecimento de dúvidas.</li>
+		</ul>
+
+		<button>Assinar Plano Padrão</button>
+	</div>
+
+	<div class="plano">
+		<div class="cabecalho-plano premium">
+		<h3>Premium 🤩</h3>
+		<h4 class="preco">R$200,00</h4>
+		</div>
+		<ul>
+			<li><span class="check">✓</span> Acesso aos módulos básicos de programação, como lógica de programação, HTML e CSS.</li>
+			<li><span class="check">✓</span> Aulas em vídeo com explicações claras e objetivas.</li>
+			<li><span class="check">✓</span> Exercícios práticos para fixação do conhecimento adquirido.</li>
+			<li><span class="check">✓</span> Material de apoio, como apostilas e slides.</li>
+			<li><span class="check">✓</span> Suporte técnico para esclarecimento de dúvidas.</li>
+		</ul>
+
+		<button>Assinar Plano Premium</button>
+	</div>
+</div>
+
+</body>
+</html>
